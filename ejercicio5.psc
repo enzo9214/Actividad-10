@@ -5,16 +5,18 @@ Algoritmo ejercicio5
 	cachipun[1]="papel"
 	cachipun[2]="tijera"
 	
-	Mientras 1=1 Hacer
-		pc = Azar(3)
-		Escribir "Ingresa 0. piedra"
-		Escribir "Ingresa 1. papel"
-		Escribir "Ingresa 2. tijera"
+	pc = Azar(3)
+	Escribir "Ingresa 0. piedra"
+	Escribir "Ingresa 1. papel"
+	Escribir "Ingresa 2. tijera"
+	Escribir "Ingresa 3 para terminar el juego"
 		
-		Repetir
+	Repetir
 		Leer player
-		Hasta Que player>= 0 y player <= 2
+	Hasta Que player>= 0 y player <= 3
 		
+	Si player != 3 Entonces
+				
 		Si cachipun[player] == cachipun[pc] Entonces
 			Escribir "Empate!, el PC tambien eligio ", cachipun[pc]
 		SiNo
@@ -26,7 +28,7 @@ Algoritmo ejercicio5
 					Escribir "Perdiste, el PC eligio ",cachipun[pc]
 				FinSi
 			FinSi
-			
+				
 			Si player == 1 Entonces
 				Si pc == 0 Entonces
 					Escribir "Ganaste, el PC eligio ",cachipun[pc]
@@ -35,7 +37,7 @@ Algoritmo ejercicio5
 					Escribir "Perdiste, el PC eligio ",cachipun[pc]
 				FinSi
 			FinSi
-			
+				
 			Si player == 2 Entonces
 				Si pc == 0 Entonces
 					Escribir "Perdiste, el PC eligio ",cachipun[pc]
@@ -45,8 +47,7 @@ Algoritmo ejercicio5
 				FinSi
 			FinSi
 		Fin Si
-		Escribir "***************************************************"
-	Fin Mientras
-	
-	
+	FinSi
+		
+	Escribir "Saliendo"
 FinAlgoritmo
